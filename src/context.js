@@ -56,7 +56,7 @@ class ProductProvider extends Component {
     }
     );
   };
-  openModel = id =>{
+  openModal = id =>{
     const product = this.getItem(id);
     this.setState(()=>{
       return {modalProduct: product, modalOpen:true}
@@ -161,7 +161,7 @@ class ProductProvider extends Component {
       <ProductContext.Provider value={{...this.state,
       handleDetail:this.handleDetail,
       addToCart:this.addToCart,
-      openModel:this.openModel,
+      openModal:this.openModal,
       closeModal:this.closeModal,
       increment: this.increment,
       decrement: this.decrement,
